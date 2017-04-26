@@ -1,6 +1,7 @@
 import React from "react";
 
 // onVideoSelect came from VideoList.
+// each VideoListItem has different "video"
 const VideoListItem = ({video, onVideoSelect}) => {
 /*
 ({video}) === const video = props.video;	
