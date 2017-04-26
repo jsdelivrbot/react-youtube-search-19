@@ -16,7 +16,17 @@ const VideoList = (props) => {
 		// fun here
 		return (
 			<div>
-				<VideoListItem key={video.etag} video={video} />
+				<VideoListItem 
+					// function, came from App
+					onVideoSelect={props.onVideoSelect}
+					
+					//just for nothing 
+					key={video.etag} 
+					
+					// video - separate video item, iterator. 
+					// needed to pass to video_list_item.js as a property
+					video={video} 
+				/>
 			</div>
 		);
 	 });

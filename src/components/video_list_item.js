@@ -1,6 +1,7 @@
 import React from "react";
 
-const VideoListItem = ({video}) => {
+// onVideoSelect came from VideoList.
+const VideoListItem = ({video, onVideoSelect}) => {
 /*
 ({video}) === const video = props.video;	
 this props object has a property "video". 
@@ -14,7 +15,8 @@ make a new variable called that name (video) - es6 feature
 	const videoDescription= video.snippet.title;
 	
 	return (
-		<li className="list-group-item">
+		// there onVideoSelect fires
+		<li onClick={() => onVideoSelect(video)} className="list-group-item">
 			<div className="video-list-media">
 				<div className="media-left">
 					<img src={imageUrl} alt="no picture" className="media-object"/>
