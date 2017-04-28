@@ -3,12 +3,12 @@
 	text-align: center;
 }
 
-.search-bar-input input {
+.search-bar input {
 	width: 75%;
 }
 
 .media-object {
-	max-width: 200px;
+	max-width: 100%;
 }
 
 .video-detail .details {
@@ -23,6 +23,7 @@
 }
 
 .list-group-item:hover {
-	background: #eee;
+	/*background: #eee;*/
+	background: #ddd;
 }
 

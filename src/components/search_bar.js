@@ -24,7 +24,7 @@ class SearchBar extends Component {
 	// must return some jsx, otherwise will be an error
 	// ## need more info abour React events (onChange ...)
 	render() {
-		// return <input onChange={this.onInpurChange} />
+		// return <input onChange={this.onInputChange} />
 		// return <input onChange={(event) => console.log(event.target.value)} />
 		
 		/*
@@ -35,22 +35,20 @@ class SearchBar extends Component {
 			<div className="search-bar">
 				<input 
 					value={this.state.term}
-					onChange={(event) => this.setState({term: event.target.value})} 
+					// onChange={(event) => this.setState({term: event.target.value})} 
+					onChange={(event) => this.onInputChange(event.target.value)} 
 				/>
-				
 			</div>
-		)
-
+		);
 
 	}
 
-
-	onInputChange(event) {
-		 
-		console.log(event.target.value);
+	// this is it
+	onInputChange(term) {
+		this.setState({term});
+		//props goes to index.js to App.render() 
+		this.props.onSearchTermChange(term);		
 	}
-
-	
 
 }
 

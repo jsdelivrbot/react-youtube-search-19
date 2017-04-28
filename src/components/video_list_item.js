@@ -3,14 +3,8 @@ import React from "react";
 // onVideoSelect came from VideoList.
 // each VideoListItem has different "video"
 const VideoListItem = ({video, onVideoSelect}) => {
-/*
-({video}) === const video = props.video;	
-this props object has a property "video". 
-take it as param
-make a new variable called that name (video) - es6 feature
-*/		
 	
-	console.log(video);
+	// console.log(video);
 	
 	const imageUrl = video.snippet.thumbnails.medium.url;
 	const videoDescription= video.snippet.title;
